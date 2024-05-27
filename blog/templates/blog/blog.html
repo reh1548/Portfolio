@@ -1,0 +1,45 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Blogs</h1>
+      </div>
+    </div>
+  </div>
+
+{% include "base/_background_shapes.html" %}
+
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      {% if blogs %}
+      {% for blog in blogs %}
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <article class="card shadow">
+          <img class="rounded card-img-top" src="{{ blog.main_image }}" alt="post-thumb">
+          <div class="card-body">
+            <h4 class="card-title"><a class="text-dark" href="{% url 'blog_single' %}">{{ blog.title }}</a>
+            </h4>
+            <p class="cars-text">{{ blog.subtitle }}</p>
+            <a href="{% url 'blog_single' blog.id %}" class="btn btn-xs btn-primary">Read More</a>
+            <a href="#" class="btn btn-xs btn-warning">Edit</a>
+            <a href="#" class="btn btn-xs btn-danger">Delete</a>
+          </div>
+        </article>
+      </div>
+      {% endfor %}
+      {% else %}
+      <h5 class="alert alert-primary ms-4 me-4">No Blogs Currently</h5>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<!-- /blog -->
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+<!-- page title -->
+<section class="page-title-alt bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-white font-tertiary">About Me</h1>
+      </div>
+    </div>
+  </div>
+
+{% include 'base/_background_shapes.html' %}
+
+<!-- /page title -->
+
+<!-- about -->
+<section class="section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p>Hi, my name is Rehanul Ahmed. I live in Bangladesh. I am a self taught software developer. I am passionate about building things. I love to work in teams to solve problems.</p>
+        <p>My hobbies include reading history books, playing military simulation video games and have deep philosophical discussions with friends while I sip my espresso 🥤.</p>
+        <p>Currently learning DevOps and building websites as a hobby.</p>
+      </div>
+      <div class="col-md-4 text-center drag-lg-top">
+        <div class="shadow-down mb-4">
+          <img src="{% static 'images/about/author.jpg' %}" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white">
+        </div>
+        <img src="{% static 'images/about/signature.png' %}" alt="signature" class="img-fluid">
+        <h4>Rehanul Ahmed</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- Work Process -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Work Process</h2>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <div class="">
+          <img src="{% static 'images/icons/plan.png' %}" class="mb-4" alt="icon">
+          <h4 class="mb-4">Research and Plan</h4>
+          <p>Gather and analyze data to identify customer needs and opportunities.
+            Develop a project plan that outlines the goals, scope, timeline, and budget.
+            Conduct risk assessments and develop mitigation strategies.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'images/icons/design.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Design and Develop</h4>
+        <p>Create prototypes and mockups to test and refine the design.
+          Develop the product or service using the appropriate tools and technologies.
+          Conduct quality assurance testing to ensure that the product or service meets requirements.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'images/icons/print.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Deliver</h4>
+        <p>Launch the product or service and make it available to users.
+          Provide customer support and make updates and improvements as needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ./Work Process -->
+
+{% endblock %}

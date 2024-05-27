@@ -1,0 +1,241 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+
+
+<!-- hero area -->
+<section class="hero-area bg-primary" id="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <h1 class="text-white font-tertiary">Hi! I’m <br> Rehanul Ahmed <br> Web Developer </h1>
+      </div>
+    </div>
+  </div>
+  <div class="layer-bg w-100">
+    <img class="img-fluid w-100" src="{% static 'images/illustrations/leaf-bg.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l2">
+    <img src="{% static 'images/illustrations/dots-cyan.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l3">
+    <img src="{% static 'images/illustrations/leaf-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l4">
+    <img src="{% static 'images/illustrations/dots-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l5">
+    <img src="{% static 'images/illustrations/leaf-yellow.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l6">
+    <img src="{% static 'images/illustrations/leaf-cyan.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l7">
+    <img src="{% static 'images/illustrations/dots-group-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l8">
+    <img src="{% static 'images/illustrations/leaf-pink-round.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l9">
+    <img src="{% static 'images/illustrations/leaf-cyan-2.png' %}" alt="bg-shape">
+  </div>
+  <!-- social icon -->
+  <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+    <li class="mb-3"><a class="text-white" href="https://themefisher.com/"><i class="ti-facebook"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://themefisher.com/"><i class="ti-instagram"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://themefisher.com/"><i class="ti-dribbble"></i></a></li>
+    <li class="mb-3"><a class="text-white" href="https://themefisher.com/"><i class="ti-twitter"></i></a></li>
+  </ul>
+  <!-- /social icon -->
+</section>
+<!-- /hero area -->
+
+<!-- about -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="font-secondary paragraph-lg text-dark">Strong foundation in computer science and an passionate about DevOps and SWE. 
+          Currently working as a System Engineer at Wipro Technologies for GrameenPhone (Telenor), where I provide technical support and implement solutions for various projects. 
+          Skilled in troubleshooting, and problem-solving and eager to learn new technologies and expand my knowledge in the field of DevOps and SWE. 
+          I look forward to connecting with professionals in similar fields and exploring opportunities to grow in my career.</p>
+        <a href="{% url 'about' %}" class="btn btn-transparent">know more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- skills -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
+            <div class="wave" data-progress="90%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Web App (90%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#9473e6">
+            <div class="wave" data-progress="80%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">IT Service (80%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#bdecf6">
+            <div class="wave" data-progress="70%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Deep Learning (70%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#ffbcaa">
+            <div class="wave" data-progress="90%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Reasearch (90%)</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /skills -->
+
+<!-- experience -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="static/images/experience/icon-1.png" alt="icon">
+        <p class="mb-0">Jan 2023 - Present</p>
+        <h4>System Engineer</h4>
+        <h6 class="text-light">Wipro</h6>
+      </div>
+      <!-- <div class="col-lg-3 col-md-4 text-center">
+        <img src="static/images/experience/icon-2.png" alt="icon">
+        <p class="mb-0">Mar 2009 - Aug 2014</p>
+        <h4>UX & UI Designer</h4>
+        <h6 class="text-light">AUGMEDIX</h6>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="static/images/experience/icon-3.png" alt="icon">
+        <p class="mb-0">Sep 2014 - Present</p>
+        <h4>Senior UI Designer</h4>
+        <h6 class="text-light">THEMEFISHER</h6>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- ./experience -->
+
+<!-- education -->
+<section class="section position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2019-2023</p>
+            <h4>BSc. in CSE</h4>
+            <p class="mb-0 text-light">Brac University</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2016 - 2018</p>
+            <h4>HSC</h4>
+            <p class="mb-0 text-light">Govt. Science College</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2014 - 2016</p>
+            <h4>SSC</h4>
+            <p class="mb-0 text-light">Monipur High School & College </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bg image -->
+  <img class="img-fluid edu-bg-image w-100" src="static/images/backgrounds/education-bg.png" alt="bg-image">
+</section>
+<!-- /education -->
+
+<!-- services -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-dashboard icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">IT Service</h4>
+            <p>Experienced in providing administrative support for both infrastructure and application domains.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card active-bg-primary hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-settings icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">Software Development</h4>
+            <p>I provide software development services, especially backend services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-search icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">Research</h4>
+            <p>Able to help in academic resarch especially in Deep Learning domain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /services -->
+
+
+{% endblock %}

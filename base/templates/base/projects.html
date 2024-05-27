@@ -1,0 +1,48 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block body %}
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Projects</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+{% include 'base/_background_shapes.html' %}
+<!-- /page title -->
+
+<style>
+
+  .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
+<!-- project -->
+<section class="section">
+  <div class="container">
+    <div class="row shuffle-wrapper">
+      {% for project in projects %}
+      <div class="col-lg-4 col-6 mb-4 shuffle-item" ">
+        <div class="position-relative rounded hover-wrapper" style="overflow: hidden; height: 300px;">
+          <img src="{{ project.project_image_link }}" alt="portfolio-image" class="img-fluid rounded w-100 d-block project-image">
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ project.project_link }}" target="_blank" >view project</a>
+            </div>
+          </div>
+        </div>
+        <p class="font-secondary paragraph-lg text-dark" style="text-align: center;">{{ project.project_name }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- /project -->
+
+{% endblock %}
