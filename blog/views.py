@@ -11,12 +11,3 @@ def blog(request):
 def blog_single(request, id):
     blog = Blog.objects.get(pk=id)
     return render(request, 'blog/blog_single.html', {'blog': blog})
-
-# def add_blog(request):
-#     pass
-
-# def edit_blog(request):
-#     pass
-
-# def delete_blog(request):
-#     pass
