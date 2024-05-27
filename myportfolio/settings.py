@@ -36,6 +36,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-dni1d%m6(cbq6iuakb$xc3_pea!ous*zepq7&#0%#(kbza6382'
 
+LOGIN_REDIRECT_URL = 'index'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -55,6 +58,7 @@ INSTALLED_APPS = [
     'accounts',
     'blog',
     'tinymce',
+
 ]
 
 MIDDLEWARE = [
@@ -150,3 +154,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# CRISPY_TEMPLATE_PACK="bootstrap5"
+
