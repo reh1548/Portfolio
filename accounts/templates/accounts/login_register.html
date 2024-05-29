@@ -1,0 +1,102 @@
+{% extends "base/base.html" %} {% load static %} {% block body %}
+
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">{% if register %}Register{% else %}Login{% endif %}</h1>
+      </div>
+    </div>
+  </div>
+  <!-- background shapes -->
+  {% include "base/_background_shapes.html" %}
+  <!-- /page title -->
+
+  <section class="section section-on-footer" data-background="images/backgrounds/bg-dots.png" style="padding-bottom: 290px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="bg-white rounded text-center p-5 shadow-down">
+            {% if messages %}
+              <div id="message-container">
+                {% for message in messages %}
+                  <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-danger{% endif %}" role="alert">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if register %}
+            <!-- Registration Form Starts-->
+            <form action="{% url 'register' %}" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="User Name" required />
+                {% if form.username.errors %}
+                <div class="text-danger">{{ form.username.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="text" name="first_name" class="form-control" placeholder="First Name" required />
+                {% if form.first_name.errors %}
+                <div class="text-danger">{{ form.first_name.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="text" name="last_name" class="form-control" placeholder="Last Name" required />
+                {% if form.last_name.errors %}
+                <div class="text-danger">{{ form.last_name.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Email" required />
+                {% if form.email.errors %}
+                <div class="text-danger">{{ form.email.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="password" name="password1" class="form-control" placeholder="Password" required />
+                {% if form.password1.errors %}
+                <div class="text-danger">{{ form.password1.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required />
+                {% if form.password2.errors %}
+                <div class="text-danger">{{ form.password2.errors }}</div>
+                {% endif %}
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary" />
+              </div>
+            </form>
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            <!-- Registration Form Ends-->
+            {% else %}
+            <!-- Login Form Starts-->
+            <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="username" class="form-control" placeholder="User Name" required />
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" class="form-control" placeholder="Password" required />
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+              </div>
+            </form>
+            <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+            <!-- Login Form Ends-->
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+</section>

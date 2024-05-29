@@ -53,13 +53,13 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'about' %}">About</a>
         </li>
-        {% if user.is_authenticated %}
+        {% if request.user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
         {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">Login</a>
+          <a class="nav-link" href="{% url 'login' %}">Login/ Sign Up</a>
         </li>
         {% endif %}
 
@@ -123,6 +123,21 @@
 
 <!-- Main Script -->
 <script src="{% static 'js/script.js' %}"></script>
+
+
+<script>
+  setTimeout(function() {
+    var messageContainer = document.getElementById('message-container');
+    if (messageContainer) {
+      var messages = messageContainer.getElementsByClassName('alert');
+      for (var i = 0; i < messages.length; i++) {
+        if (!messages[i].classList.contains('alert-danger')) { // Do not clear error messages
+          messages[i].style.display = 'none';
+        }
+      }
+    }
+  }, 2000); // Clear non-error messages after 2 seconds
+</script>
 
 </body>
 </html>
